@@ -43,13 +43,22 @@ const Home: React.FC<HomeProps> = ({ data }) => {
   );
 };
 
-export async function getStaticProps() {
+// export async function getStaticProps() {
+// const axiosData = await Axios.get("https://simple-blog-api.crew.red/posts");
+// const data = axiosData?.data.reverse();
+
+// return {
+//   props: { data },
+//   revalidate: 1,
+// };
+// }
+
+export async function getServerSideProps() {
   const axiosData = await Axios.get("https://simple-blog-api.crew.red/posts");
   const data = axiosData?.data.reverse();
 
   return {
     props: { data },
-    revalidate: 1,
   };
 }
 

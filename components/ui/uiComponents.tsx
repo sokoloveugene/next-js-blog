@@ -162,7 +162,6 @@ export const TextField = styled.input`
   padding: 20px;
   margin-bottom: 25px;
   margin-top: 16px;
-  user-select: none;
   text-align: center;
   border: none;
   font-size: 22px;

@@ -1,5 +1,5 @@
-import  { useRouter } from "next/router";
-import {PostContainer, PostTitle, PostSubTitle} from "../ui/uiComponents"
+import { useRouter } from "next/router";
+import { PostContainer, PostTitle, PostSubTitle } from "../ui/uiComponents";
 import { motion } from "framer-motion";
 
 const item = {

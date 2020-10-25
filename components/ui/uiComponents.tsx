@@ -146,6 +146,7 @@ export const Svg = styled.svg`
   height: 100%;
   width: 100%;
 `;
+
 export const SvgRotated = styled.svg`
   transform: rotate(45deg);
   height: 100%;
@@ -170,6 +171,7 @@ export const TextField = styled.input`
   & ::placeholder {
     color: #ffffff;
   }
+
   & :focus {
     outline: none;
   }
@@ -192,11 +194,12 @@ export const SubmitBtn = styled.button`
   background-color: #761cea;
   transition: all 200ms ease;
   cursor: pointer;
-
   color: #fff;
+  
   & :focus {
     outline: none;
   }
+
   & :hover {
     outline: none;
     background-color: #8a39f5;

@@ -15,7 +15,7 @@ const PostWithId: React.FC<PostWithIdProps> = ({ data, requiredComments }) => {
   const { query } = useRouter();
   const { postId } = query;
   const [comments, setComments] = useState(requiredComments.reverse());
-  
+
   const handleCreate = (body) => {
     Axios.post("https://simple-blog-api.crew.red/comments", {
       postId,
@@ -43,12 +43,11 @@ export async function getServerSideProps(context) {
   );
   const data = res?.data;
 
-const commentsResponse = Axios.get(
-  "https://simple-blog-api.crew.red/comments"
-);
-const requiredComments = (await commentsResponse).data
-  ?.reverse()
-  .filter((item) => item.postId === context.query.postId);
+  const commentsResponse = Axios.get(
+    "https://simple-blog-api.crew.red/comments"
+  );
+  const requiredComments = (await commentsResponse).data
+    ?.reverse()
+    .filter((item) => item.postId === context.query.postId);
   return { props: { data, requiredComments } };
 }
-
